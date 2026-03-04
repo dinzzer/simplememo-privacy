@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー — Autoflash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50: #f0fdf4;
+    --green-100: #dcfce7;
+    --green-200: #bbf7d0;
+    --green-500: #22c55e;
+    --green-600: #16a34a;
+    --green-700: #15803d;
+    --green-800: #166534;
+    --green-900: #14532d;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-800);
+    line-height: 1.85;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .header {
+    background: linear-gradient(135deg, var(--green-700) 0%, var(--green-800) 50%, var(--green-900) 100%);
+    color: white;
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(0,0,0,0.12) 0%, transparent 50%);
+  }
+  .header-inner { position: relative; z-index: 1; }
+  .header .app-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    font-size: 26px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .header h1 {
+    font-family: 'IBM Plex Sans', 'Noto Sans JP', sans-serif;
+    font-size: 28px; font-weight: 600;
+    letter-spacing: -0.5px; margin-bottom: 6px;
+  }
+  .header p {
+    font-size: 14px; opacity: 0.8; font-weight: 300;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .effective-date {
+    display: inline-block;
+    background: var(--green-100);
+    color: var(--green-800);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+  }
+
+  .intro {
+    font-size: 15px;
+    color: var(--gray-600);
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .section {
+    margin-bottom: 36px;
+  }
+  .section-number {
+    display: inline-block;
+    background: var(--green-600);
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    width: 28px; height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .section h2 span { vertical-align: middle; }
+  .section p {
+    color: var(--gray-700);
+    margin-bottom: 12px;
+  }
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .section ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    color: var(--gray-700);
+  }
+  .section ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px; top: 10px;
+    width: 6px; height: 6px;
+    background: var(--green-500);
+    border-radius: 50%;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 16px 0;
+  }
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  .service-list {
+    display: grid;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .service-item {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .service-icon {
+    width: 36px; height: 36px;
+    background: var(--green-100);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .service-info { flex: 1; }
+  .service-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 2px;
+  }
+  .service-desc {
+    font-size: 13px;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+  .service-link {
+    font-size: 12px;
+    color: var(--green-600);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .service-link:hover { text-decoration: underline; }
+
+  .divider {
+    height: 1px;
+    background: var(--gray-200);
+    margin: 40px 0;
+  }
+
+  .footer {
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 13px;
+    padding: 24px;
+    border-top: 1px solid var(--gray-200);
+  }
+  .footer a {
+    color: var(--green-600);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 40px 20px 36px; }
+    .header h1 { font-size: 24px; }
+    .container { padding: 28px 18px 60px; }
+    .section h2 { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="app-icon">📖</div>
+    <h1>Autoflash</h1>
+    <p>プライバシーポリシー</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <span class="effective-date">施行日: 2026年3月4日</span>
+
+  <p class="intro">
+    本プライバシーポリシーは、Autoflash（以下「本アプリ」）をご利用いただく際に、どのような情報が収集・利用されるかについてお知らせするものです。本アプリは個人開発によるもので、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。
+  </p>
+
+  <!-- Section 1 -->
+  <div class="section">
+    <h2><span class="section-number">1</span><span>収集する情報</span></h2>
+    <p>本アプリは、ユーザーアカウントの作成を必要とせず、氏名、メールアドレス、電話番号などの個人情報を直接収集することはありません。</p>
+    <p>本アプリが扱うデータは以下のとおりです。</p>
+
+    <div class="card">
+      <div class="card-title">端末内に保存されるデータ</div>
+      <ul>
+        <li>登録した単語帳・単語・定義・例文</li>
+        <li>クイズの結果と学習進捗</li>
+        <li>アプリの設定（表示言語の選択など）</li>
+        <li>広告削除の購入状態</li>
+      </ul>
+      <p style="font-size:13px; color: var(--gray-500); margin-top: 8px;">
+        これらのデータはすべて端末内（ローカルデータベース）にのみ保存され、外部サーバーへの送信は行いません。アプリを削除すると、これらのデータも削除されます。
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <h2><span class="section-number">2</span><span>第三者サービスの利用</span></h2>
+    <p>本アプリでは、以下の第三者サービスを利用しています。これらのサービスは独自のプライバシーポリシーに基づいて情報を収集する場合があります。</p>
+
+    <div class="service-list">
+      <div class="service-item">
+        <div class="service-icon">📢</div>
+        <div class="service-info">
+          <div class="service-name">Google AdMob</div>
+          <div class="service-desc">
+            広告の表示に使用します。AdMobはパーソナライズド広告の配信のために、端末の広告識別子やおおまかな位置情報などを収集する場合があります。アプリ内課金（広告削除）により広告を完全に非表示にできます。
+          </div>
+          <a class="service-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー →</a>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">💳</div>
+        <div class="service-info">
+          <div class="service-name">Google Play Billing</div>
+          <div class="service-desc">
+            広告削除のアプリ内課金に使用します。購入処理はすべてGoogle Playを通じて行われ、本アプリが決済情報を直接取得することはありません。
+          </div>
+          <a class="service-link" href="https://play.google.com/about/privacy-security-deception/" target="_blank" rel="noopener">Google Play ポリシー →</a>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">📖</div>
+        <div class="service-info">
+          <div class="service-name">Free Dictionary API</div>
+          <div class="service-desc">
+            単語の定義・品詞・例文の取得に使用します。検索した単語がAPIサーバーに送信されます。個人を特定する情報は含まれません。
+          </div>
+          <a class="service-link" href="https://dictionaryapi.dev/" target="_blank" rel="noopener">Free Dictionary API →</a>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">🌐</div>
+        <div class="service-info">
+          <div class="service-name">MyMemory Translation API</div>
+          <div class="service-desc">
+            英語の定義を日本語に翻訳する際に使用します。翻訳対象のテキストがAPIサーバーに送信されます。個人を特定する情報は含まれません。
+          </div>
+          <a class="service-link" href="https://mymemory.translated.net/" target="_blank" rel="noopener">MyMemory →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <h2><span class="section-number">3</span><span>広告について</span></h2>
+    <p>本アプリでは、Google AdMob による広告を表示しています。広告の配信にあたり、Googleおよびその広告パートナーがユーザーの端末情報や広告識別子を使用してパーソナライズド広告を配信する場合があります。</p>
+    <p>広告のパーソナライズ設定は、端末の「Google設定」＞「広告」からいつでも変更できます。また、アプリ内課金により広告を完全に削除することが可能です。</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section">
+    <h2><span class="section-number">4</span><span>データの保存と管理</span></h2>
+    <p>本アプリで作成されるすべてのデータ（単語帳、単語、学習記録など）は、ユーザーの端末内にのみ保存されます。クラウドへのバックアップや同期機能は提供していません。</p>
+    <p>アプリを端末からアンインストールすると、保存されたすべてのデータが削除されます。データの復元はできませんのでご了承ください。</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section">
+    <h2><span class="section-number">5</span><span>お子様のプライバシー</span></h2>
+    <p>本アプリは13歳未満のお子様を対象としていません。13歳未満のお子様から意図的に個人情報を収集することはありません。</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section">
+    <h2><span class="section-number">6</span><span>セキュリティ</span></h2>
+    <p>本アプリは、ユーザーのデータを保護するために合理的な措置を講じています。ただし、インターネット上のデータ送信や電子的な保存方法において、100%の安全性を保証することはできません。</p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="section">
+    <h2><span class="section-number">7</span><span>プライバシーポリシーの変更</span></h2>
+    <p>本プライバシーポリシーは随時更新される場合があります。変更があった場合は本ページを更新し、施行日を変更いたします。定期的に本ページをご確認いただくことをお勧めします。</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="section">
+    <h2><span class="section-number">8</span><span>お問い合わせ</span></h2>
+    <p>本プライバシーポリシーに関するご質問やお問い合わせがございましたら、以下までご連絡ください。</p>
+    <div class="card">
+      <p style="margin:0; font-size: 14px;">
+        <strong>メール:</strong> <a href="halsvner@gmail.com" style="color: var(--green-600); text-decoration: none;">halsvner@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 VocabMaster. All rights reserved.</p>
+</div>
+
+</body>
+</html>
